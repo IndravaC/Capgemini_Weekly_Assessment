@@ -1,0 +1,44 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+ version="2.2">
+
+ <persistence-unit name="customerPU">
+
+  <!-- Entity Classes -->
+  <class>com.hibernate.entity.Customer</class>
+  <class>com.hibernate.entity.Order</class>
+
+  <properties>
+
+   <!-- PostgreSQL Driver -->
+   <property name="javax.persistence.jdbc.driver"
+    value="org.postgresql.Driver"/>
+
+   <!-- Database URL -->
+   <property name="javax.persistence.jdbc.url"
+    value="jdbc:postgresql://localhost:5432/hibernate_db"/>
+
+   <!-- Username -->
+   <property name="javax.persistence.jdbc.user"
+    value="postgres"/>
+
+   <!-- Password -->
+   <property name="javax.persistence.jdbc.password"
+    value="Alex"/>
+
+   <!-- Hibernate Dialect -->
+   <property name="hibernate.dialect"
+    value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+   <!-- Auto table creation -->
+   <property name="hibernate.hbm2ddl.auto"
+    value="update"/>
+
+   <!-- Show SQL -->
+   <property name="hibernate.show_sql"
+    value="true"/>
+
+  </properties>
+
+ </persistence-unit>
+
+</persistence>
